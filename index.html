@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>GitHub Desktop Clone Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎来到我的个人博客</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -16,79 +16,42 @@
                         textMain: '#EAEAEA',
                         textSub: '#A9ADB4',
                         linkBlue: '#58A6FF'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .dashed-box {
-                border: 1px dashed #ccc;
-            }
-        }
-    </style>
 </head>
-<body class="bg-bgDark min-h-screen p-10 text-textMain font-sans">
-    <!-- 顶部标题 -->
-    <div class="mb-8">
-        <h1 class="text-[3.5rem] font-light text-textMain mb-2">Let's get started!</h1>
-        <p class="text-textSub text-lg">Add a repository to GitHub Desktop to start collaborating</p>
-    </div>
+<body class="bg-bgDark min-h-screen text-textMain">
+    <div class="max-w-4xl mx-auto px-6 py-16">
+        <!-- 欢迎区 -->
+        <header class="mb-16">
+            <h1 class="text-5xl font-light mb-4">你好，欢迎来到我的博客</h1>
+            <p class="text-textSub text-xl">这里记录我的学习、生活与项目分享</p>
+        </header>
 
-    <!-- 搜索栏 -->
-    <div class="flex items-center gap-3 mb-8 max-w-2xl">
-        <div class="relative flex-1">
-            <i class="fa fa-search absolute left-3 top-1/2 -translate-y-1/2 text-textSub"></i>
-            <input type="text" placeholder="Filter your repositories"
-                   class="w-full bg-cardDark pl-10 pr-4 py-2 rounded border-none outline-none text-textMain">
-        </div>
-        <button class="w-10 h-10 bg-cardDark rounded flex items-center justify-center hover:bg-[#383C44]">
-            <i class="fa fa-refresh text-textSub"></i>
-        </button>
-    </div>
+        <!-- 博客文章列表 -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold mb-6">最新文章</h2>
+            <div class="space-y-4">
+                <!-- 文章卡片，以后新增文章就复制这一块 -->
+                <a href="posts/my-first-blog.html" class="block p-5 bg-cardDark rounded-lg hover:bg-[#383C44] transition">
+                    <h3 class="text-xl font-medium mb-2">我的第一篇博客</h3>
+                    <p class="text-textSub">2026年7月4日 · 随笔</p>
+                </a>
+            </div>
+        </section>
 
-    <!-- 左右主内容容器 -->
-    <div class="flex gap-10">
-        <!-- 左侧提示区域 -->
-        <div class="flex-1">
-            <p class="text-textSub">Looks like there are no repositories for <span class="text-textMain">yijialiangcheng</span> on GitHub.</p>
-            <a href="#" class="text-linkBlue hover:underline">Refresh this list</a>
-            <span class="text-textSub"> if you've created a repository recently.</span>
-        </div>
-
-        <!-- 右侧按钮列表 -->
-        <div class="w-[520px] flex flex-col gap-4">
-            <!-- 第一个蓝色高亮按钮 -->
-            <button class="bg-btnBlue w-full py-4 px-5 rounded flex items-center gap-4 text-white text-left text-lg hover:opacity-95">
-                <i class="fa fa-graduation-cap text-xl"></i>
-                Create a tutorial repository...
-            </button>
-            <!-- 普通按钮 -->
-            <button class="bg-cardDark w-full py-4 px-5 rounded flex items-center gap-4 text-textMain text-left text-lg hover:bg-[#383C44] border border-gray-600">
-                <i class="fa fa-clone text-xl text-textSub"></i>
-                Clone a repository from the Internet...
-            </button>
-            <button class="bg-cardDark w-full py-4 px-5 rounded flex items-center gap-4 text-textMain text-left text-lg hover:bg-[#383C44] border border-gray-600">
-                <i class="fa fa-plus text-xl text-textSub"></i>
-                Create a New Repository on your local drive...
-            </button>
-            <button class="bg-cardDark w-full py-4 px-5 rounded flex items-center gap-4 text-textMain text-left text-lg hover:bg-[#383C44] border border-gray-600">
-                <i class="fa fa-folder-open text-xl text-textSub"></i>
-                Add an Existing Repository from your local drive...
-            </button>
-        </div>
-    </div>
-
-    <!-- 底部虚线提示框 -->
-    <div class="mt-12 w-[620px] dashed-box rounded p-5 text-textSub flex items-start gap-3">
-        <i class="fa fa-lightbulb-o mt-1"></i>
-        <div>
-            <span class="font-semibold text-textMain">ProTip!</span> You can drag & drop an existing repository folder here to add it to Desktop
-        </div>
+        <!-- 作品展示 -->
+        <section>
+            <h2 class="text-2xl font-semibold mb-6">我的项目</h2>
+            <div class="space-y-4">
+                <a href="projects/github-desktop-clone.html" class="block p-5 bg-cardDark rounded-lg hover:bg-[#383C44] transition">
+                    <h3 class="text-xl font-medium mb-2">GitHub Desktop 界面复刻</h3>
+                    <p class="text-textSub">纯HTML+Tailwind实现的客户端界面还原</p>
+                </a>
+            </div>
+        </section>
     </div>
 </body>
 </html>

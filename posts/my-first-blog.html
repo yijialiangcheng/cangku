@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的第一篇博客 - 个人博客</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgDark: '#1F2229',
+                        cardDark: '#2D3037',
+                        btnBlue: '#2374ED',
+                        textMain: '#EAEAEA',
+                        textSub: '#A9ADB4',
+                        linkBlue: '#58A6FF'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-bgDark min-h-screen text-textMain">
+    <div class="max-w-3xl mx-auto px-6 py-12">
+        <!-- 返回首页 -->
+        <a href="../index.html" class="text-linkBlue hover:underline mb-8 inline-block">← 返回首页</a>
+        
+        <!-- 文章标题 -->
+        <h1 class="text-4xl font-light mb-4">我的第一篇博客</h1>
+        <p class="text-textSub mb-10">发布时间：2026年7月4日</p>
+        
+        <!-- 正文区域，自由修改 -->
+        <div class="space-y-6 text-lg leading-relaxed">
+            <p>这是我的第一篇个人博客，欢迎所有人来访问我的站点。</p>
+            <p>以后我会在这里分享学习笔记、项目经验和生活日常。</p>
+            
+            <h2 class="text-2xl font-semibold mt-8 mb-3">关于这个网站</h2>
+            <p>这个网站托管在 GitHub Pages 上，是我自己动手搭建的第一个个人站点。</p>
+            
+            <!-- 插入图片示例：把图片放到 assets 文件夹，替换文件名即可 -->
+            <<img src="../assets/baobao.jpg" alt="照片" class="w-full rounded-lg">
+            
+            <!-- 文件下载示例 -->
+            <!-- <p>附件下载：<a href="../assets/文件名.pdf" class="text-linkBlue hover:underline" download>点击下载</a></p> -->
+        </div>
+    </div>
+</body>
+</html>
